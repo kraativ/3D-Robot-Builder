@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ecafebb3874134fa0db4d789b71c87, type: 3}
   m_Name: Data_Torso_Barrel
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
-  partType: 0
+  partType: 1
   partName: Barrel Torso
-  prefab: {fileID: 3606778369744480821, guid: 1fbde48b2569d6d4d99ae4c37daec321, type: 3}
+  prefab: {fileID: 7231174774515514596, guid: 1fbde48b2569d6d4d99ae4c37daec321, type: 3}
   weight: 15
   power: 15

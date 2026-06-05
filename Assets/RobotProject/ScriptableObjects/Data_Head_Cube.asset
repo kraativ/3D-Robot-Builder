@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
   partType: 0
   partName: Cube Head
-  prefab: {fileID: 7218308969227171892, guid: 9114f545d5ecd394ca7413ad9213e263, type: 3}
+  prefab: {fileID: 4695474779852718389, guid: 9114f545d5ecd394ca7413ad9213e263, type: 3}
   weight: 5
   power: 2

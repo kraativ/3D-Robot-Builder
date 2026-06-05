@@ -16,9 +16,9 @@ public class RobotController : MonoBehaviour
     public List<RobotPartData> availableLegs;
 
     [Header("Physics Settings")]
-    public float jumpForceSmall = 5f;
-    public float jumpForceMedium = 10f;
-    public float jumpForceBig = 15f;
+    public float jumpForceSmall = 100f;
+    public float jumpForceMedium = 250f;
+    public float jumpForceBig = 400f;
 
     private RobotPart spawnedLegs;
     private RobotPart spawnedTorso;
@@ -77,6 +77,7 @@ public class RobotController : MonoBehaviour
         spawnedTorso = ReplacePart(spawnedTorso, torsoData, torsoSlot);
         if (spawnedTorso != null) spawnedTorso.SetColor(currentTorsoColor);
 
+        UpdateTorsoPosition();
         UpdateHeadPosition();
         UpdateTotalStats();
     }
@@ -89,20 +90,33 @@ public class RobotController : MonoBehaviour
         spawnedHead = ReplacePart(spawnedHead, headData, headSlot);
         if (spawnedHead != null) spawnedHead.SetColor(currentHeadColor);
 
+        UpdateHeadPosition();
         UpdateTotalStats();
     }
 
-    private void UpdateTorsoPosition()
-    {
-        float legsHeight = spawnedLegs != null ? spawnedLegs.GetPartHeight() : 0f;
-        torsoSlot.localPosition = new Vector3(0f, legsSlot.localPosition.y + legsHeight, 0f);
-    }
+private void UpdateTorsoPosition()
+{
+    if (spawnedLegs == null) return;
 
-    private void UpdateHeadPosition()
-    {
-        float torsoHeight = spawnedTorso != null ? spawnedTorso.GetPartHeight() : 0f;
-        headSlot.localPosition = new Vector3(0f, torsoSlot.localPosition.y + torsoHeight, 0f);
-    }
+    float legsHeight = spawnedLegs.GetPartHeight();
+    float torsoHeight = spawnedTorso != null ? spawnedTorso.GetPartHeight() : 0f;
+
+    float targetY = legsSlot.localPosition.y + (legsHeight / 2f) + (torsoHeight / 2f);
+
+    torsoSlot.localPosition = new Vector3(0f, targetY, 0f);
+}
+
+private void UpdateHeadPosition()
+{
+    if (spawnedTorso == null) return;
+
+    float torsoHeight = spawnedTorso.GetPartHeight();
+    float headHeight = spawnedHead != null ? spawnedHead.GetPartHeight() : 0f;
+
+    float targetY = torsoSlot.localPosition.y + (torsoHeight / 2f) + (headHeight / 2f);
+
+    headSlot.localPosition = new Vector3(0f, targetY, 0f);
+}
 
     private void UpdateTotalStats()
     {
@@ -112,6 +126,8 @@ public class RobotController : MonoBehaviour
         if (currentHeadData != null) { totalWeight += currentHeadData.weight; totalPower += currentHeadData.power; }
         if (currentTorsoData != null) { totalWeight += currentTorsoData.weight; totalPower += currentTorsoData.power; }
         if (currentLegsData != null) { totalWeight += currentLegsData.weight; totalPower += currentLegsData.power; }
+
+        robotRigidbody.mass = totalWeight > 0f ? totalWeight : 1f;
 
         OnStatsChanged?.Invoke(totalWeight, totalPower);
     }

@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 2549573949034437042}
   - component: {fileID: 6282923068761699656}
   - component: {fileID: 925402573572652189}
+  - component: {fileID: -1908797170071089922}
   m_Layer: 5
   m_Name: Part_Button
   m_TagString: Untagged
@@ -193,3 +194,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1908797170071089922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8551260702635534664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a9c65be43f90d458b1ef9b82eaff84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PartButton
+  previewImage: {fileID: 7619508167750055065}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ecafebb3874134fa0db4d789b71c87, type: 3}
   m_Name: Data_Torso_Box
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
-  partType: 0
+  partType: 1
   partName: Box Torso
-  prefab: {fileID: 6308342488093741483, guid: d8d3d7d57fbf70c46a92af5b5fec7fc3, type: 3}
+  prefab: {fileID: 3101364616480631725, guid: d8d3d7d57fbf70c46a92af5b5fec7fc3, type: 3}
   weight: 20
   power: 10

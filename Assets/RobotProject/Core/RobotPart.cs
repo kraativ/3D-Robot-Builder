@@ -22,7 +22,7 @@ public class RobotPart : MonoBehaviour
 
         MaterialPropertyBlock propBlock = new MaterialPropertyBlock();
         meshRenderer.GetPropertyBlock(propBlock);
-        propBlock.SetColor("_Color", color);
+        propBlock.SetColor("_BaseColor", color);
         meshRenderer.SetPropertyBlock(propBlock);
     }
 }
