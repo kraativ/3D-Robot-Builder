@@ -99,7 +99,7 @@ public class UIManager : MonoBehaviour
                 buttonScript.SetupButton(part, robotController, texture2D);
             }
 
-            Destroy(tempModel);
+            DestroyImmediate(tempModel.gameObject);
         }
     }
 

@@ -29,9 +29,9 @@ public class RobotController : MonoBehaviour
     private RobotPartData currentTorsoData;
     private RobotPartData currentLegsData;
 
-    private Color currentHeadColor = Color.white;
-    private Color currentTorsoColor = Color.white;
-    private Color currentLegsColor = Color.white;
+    private Color currentHeadColor = Color.green;
+    private Color currentTorsoColor = Color.yellow;
+    private Color currentLegsColor = Color.black;
 
     public static event Action<float, float> OnStatsChanged;
 
