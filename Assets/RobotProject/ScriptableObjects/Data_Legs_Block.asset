@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Data_Legs_Block
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
   partType: 0
-  partName: 
-  prefab: {fileID: 0}
-  weight: 0
-  power: 0
+  partName: Block Legs
+  prefab: {fileID: 7504509431464004353, guid: 6e6e21672ff4e644a81f326609b2d555, type: 3}
+  weight: 30
+  power: 5

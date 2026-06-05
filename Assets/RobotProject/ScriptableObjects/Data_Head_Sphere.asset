@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Data_Head_Sphere
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
   partType: 0
-  partName: 
-  prefab: {fileID: 0}
-  weight: 0
-  power: 0
+  partName: Sphere Head
+  prefab: {fileID: 5871366763972777485, guid: 5ea3c96284f2ff446bceb90871293925, type: 3}
+  weight: 4
+  power: 3

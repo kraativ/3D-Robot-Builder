@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Data_Legs_Capsule
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
   partType: 0
-  partName: 
-  prefab: {fileID: 0}
-  weight: 0
-  power: 0
+  partName: Capsule Legs
+  prefab: {fileID: 7520081944360534080, guid: 957adfabee1914a459b235ccbd1c899f, type: 3}
+  weight: 12
+  power: 8

@@ -7,7 +7,7 @@ public class RobotPartData : ScriptableObject
 {
     public PartType partType;
     public string partName;
-    public GameObject prefab;
+    public RobotPart prefab;
 
     [Header("Stats")]
     public float weight;

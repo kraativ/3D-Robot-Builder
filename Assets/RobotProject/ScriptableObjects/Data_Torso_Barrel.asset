@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Data_Torso_Barrel
   m_EditorClassIdentifier: Assembly-CSharp::RobotPartData
   partType: 0
-  partName: 
-  prefab: {fileID: 0}
-  weight: 0
-  power: 0
+  partName: Barrel Torso
+  prefab: {fileID: 3606778369744480821, guid: 1fbde48b2569d6d4d99ae4c37daec321, type: 3}
+  weight: 15
+  power: 15
